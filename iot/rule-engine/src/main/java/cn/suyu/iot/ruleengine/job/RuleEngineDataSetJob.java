@@ -9,7 +9,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 
 /**
- * @Description TODO
+ * @Description 读取指定路径文件作为输入源，做批处理
  * @Author suyu
  * @Data 2020/11/7 16:22
  */

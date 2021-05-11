@@ -12,7 +12,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
 
 /**
- * @Description TODO
+ * @Description 开启一个本地9999的TCP协议端口，由客户端主动发起连接，强制服务器保持连接并继续监听端口
  * @Author suyu
  * @Data 2020/11/7 16:22
  */
