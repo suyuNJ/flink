@@ -9,7 +9,7 @@ import org.apache.flink.util.Collector;
  * @Author suyu
  * @Data 2021/8/27 15:38
  */
-public class SetMapFunction implements FlatMapFunction<String, Tuple2<String, Integer>> {
+public class WordCountMapFunction implements FlatMapFunction<String, Tuple2<String, Integer>> {
     @Override
     public void flatMap(String value, Collector<Tuple2<String, Integer>> out) throws Exception {
         String[] words = value.split(" ");

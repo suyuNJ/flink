@@ -1,6 +1,6 @@
 package cn.suyu.iot.ruleengine.job;
 
-import cn.suyu.iot.ruleengine.function.SetMapFunction;
+import cn.suyu.iot.ruleengine.function.WordCountMapFunction;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
@@ -11,7 +11,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
  * @Author suyu
  * @Data 2020/11/7 16:22
  */
-public class RuleEngineDataSetJob {
+public class DataSetFileJob {
     public static void main(String[] args) throws Exception {
         //创建执行环境
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
@@ -39,7 +39,7 @@ public class RuleEngineDataSetJob {
 //        }).groupBy(0).sum(1);
 
         //方法2
-        DataSet<Tuple2<String, Integer>> dataSet = inputDataSource.flatMap(new SetMapFunction()).groupBy(0).sum(1);
+        DataSet<Tuple2<String, Integer>> dataSet = inputDataSource.flatMap(new WordCountMapFunction()).groupBy(0).sum(1);
         dataSet.print();
     }
 }
