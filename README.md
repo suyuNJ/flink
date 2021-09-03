@@ -17,7 +17,7 @@ flink on yarn
    tips:-n(the numbers of taskmanager) is deprecated
    ./bin/yarn-session.sh  -jm 816  -tm  2048 -nm cuiot-v1 -d
    (2) start job
-   ./bin/flink run -c cn.suyu.iot.ruleengine.job.DataStreamSocketJob /data/suyu/rule-engine-1.0-SNAPSHOT.jar --host 172.30.125.50 --port 7777
+   ./bin/flink run -c cn.suyu.iot.ruleengine.job.DataStreamSocketJob /data/rule-engine-1.0-SNAPSHOT.jar --host 172.30.125.66 --port 7777
 4.2 per-job mode
    ./bin/flink run -m yarn-cluster \
                                   ./examples/batch/WordCount.jar \
