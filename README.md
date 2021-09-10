@@ -23,4 +23,8 @@ flink on yarn
                                   ./examples/batch/WordCount.jar \
                                   --input hdfs:///user/hamlet.txt --output hdfs:///user/wordcount_out
    ./bin/flink run -m yarn-cluster -c cn.suyu.iot.ruleengine.job.DataStreamSocketJob /data/suyu/rule-engine-1.0-SNAPSHOT.jar --host 172.30.125.50 --port 7777
-
+   
+# flink yarn
+  1、session mode
+  1.1 start yarn session cmd: ./bin/yarn-session.sh  -jm 816  -tm  2048 -nm iot-v1 -d
+  1.2 ./bin/flink run -yid application_1631101260938_0030  examples/streaming/WordCount.jar or localhost:8002/yarnTest/submitJob
